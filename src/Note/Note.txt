@@ -1,0 +1,38 @@
+1. Navbar
+Berisi navigasi utama supaya pengunjung gampang pindah section.
+2. Hero Section Section pertama untuk menarik perhatian.Isi biasanya:
+    * Nama yayasan
+    * Tagline / kalimat utama
+    * CTA (contoh: “Lihat Program Kami”)
+3. About Yayasan Menjelaskan siapa yayasan tersebut, bergerak di bidang apa, dan tujuan utamanya.
+4. Visi & Misi Setelah user tahu tentang yayasan, baru diperlihatkan arah dan nilai yang dibawa.
+5. Program Utama Menampilkan kegiatan/program inti yayasan agar pengunjung langsung tahu impact yang dilakukan.
+6. Dokumentasi Yayasan Foto kegiatan, event, atau aktivitas sosial untuk membangun trust dan menunjukkan aktivitas nyata.
+7. Struktur Organisasi Menampilkan tim/pengurus yayasan untuk meningkatkan kredibilitas dan transparansi.
+8. Footer Bagian penutup berisi:
+    * Lokasi
+    * Kontak
+    * Pendanaan
+    * Akuntabilitas / transparansi
+    * Social media
+    * Copyright
+
+
+Isi navbar center 
+About, Visi & Misi, Program, Documentassi, Struktur  
+
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+
+}
