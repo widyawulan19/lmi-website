@@ -5,7 +5,7 @@ import About from './About'
 import VisiMisi from './VisiMisi'
 import ProgramUtama from './ProgramUtama'
 import Dokumentasi from './Dokumentasi'
-import Footer from './Footer'
+// import Footer from './Footer'
 
 function LandingPage() {
   return (
@@ -16,7 +16,7 @@ function LandingPage() {
         <VisiMisi/>
         <ProgramUtama/>
         <Dokumentasi/>
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }

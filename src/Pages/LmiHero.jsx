@@ -7,7 +7,7 @@ function LmiHero() {
 
       <div className="hero-overlay"></div>
 
-      <div className="hero-content">
+      <div className="hero-content" data-aos="fade-up" data-aos-duration="1000">
             <span className="hero-badge">
             Since 2011 • Trusted Nationwide
             </span>
@@ -40,22 +40,22 @@ function LmiHero() {
 
       <div className="hero-stats">
 
-        <div className="stat-card">
+        <div className="stat-card" data-aos="fade-up"  data-aos-delay="200">
           <h2>13+</h2>
           <p>Years Experience</p>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card" data-aos="fade-up"  data-aos-delay="400">
           <h2>9,750+</h2>
           <p>Product SKUs</p>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card" data-aos="fade-up"  data-aos-delay="600">
           <h2>1,500+</h2>
           <p>Active Partners</p>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card" data-aos="fade-up"  data-aos-delay="800">
           <h2>National</h2>
           <p>Distribution</p>
         </div>

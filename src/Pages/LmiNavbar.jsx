@@ -1,12 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../Style/LMI/Navbar.css'
 import logo from  '../Assets/Logo-lmi.png'
+import { useNavigate } from "react-router-dom";
 
 function LmiNavbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleScroll = () =>{
+      setIsScrolled(window.scrollY > 50);
+    }
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+  const navigateToAbout = () =>{
+    navigate('/about')
+  }
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="navbar-box">
             <div className="navbar-logo">
                 {/* <h2>LAMONTE</h2> */}
@@ -15,7 +34,7 @@ function LmiNavbar() {
 
             <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
                 <a href="/">HOME</a>
-                <a href="/">ABOUT US</a>
+                <a href="/about">ABOUT US</a>
                 <a href="/">GALLERY</a>
                 <a href="/">ARTICLES</a>
                 <a href="/">CAREERS</a>
@@ -23,10 +42,6 @@ function LmiNavbar() {
             </div>
 
             <div className="navbar-actions">
-                <button className="btn-outline">
-                Login Partner
-                </button>
-
                 <button className="btn-primary">
                 Contact Us
                 </button>

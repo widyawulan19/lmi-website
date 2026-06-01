@@ -1,0 +1,157 @@
+.footer {
+    background: #0f0f0f;
+
+    color: white;
+
+    padding: 90px 8% 40px;
+}
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 60px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .08);
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* gap: 10px; */
+}
+
+.footer-brand img {
+    width: 220px;
+    /* margin-bottom: 20px; */
+}
+
+.footer-brand h2 {
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, .65);
+
+    line-height: 1.8;
+
+    max-width: 340px;
+    text-align: left;
+}
+
+.footer h3 {
+    color: #FF9910;
+
+    margin-bottom: 20px;
+
+    font-size: 1rem;
+}
+
+.footer-links,
+.footer-contact,
+.footer-office {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, .65);
+
+    text-decoration: none;
+
+    margin-bottom: 12px;
+
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: #FFE141;
+}
+
+.footer-contact p,
+.footer-office p {
+    color: rgba(255, 255, 255, .65);
+
+    line-height: 1.9;
+}
+
+.footer-bottom {
+    padding-top: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, .5);
+}
+
+.footer-policy {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-policy a {
+    text-decoration: none;
+
+    color: rgba(255, 255, 255, .5);
+}
+
+/* ===== 992 ===== */
+
+@media(max-width:992px) {
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+/* ===== 780 ===== */
+
+@media(max-width:780px) {
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+/* ===== 480 ===== */
+
+@media(max-width:480px) {
+
+    .footer {
+        padding: 70px 5% 30px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand h2 {
+        font-size: 1.6rem;
+    }
+
+    .footer-policy {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+}

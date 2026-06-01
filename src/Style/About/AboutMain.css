@@ -1,0 +1,125 @@
+.about {
+    padding: 120px 0px;
+    background: #fff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* LEFT MEDIA */
+.about-media {
+    position: relative;
+}
+
+.swiper-frame {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 24px;
+
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.364);
+}
+
+.swiper-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.7s ease;
+}
+
+.swiper-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+/* dots */
+.swiper-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.swiper-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.swiper-dots button.active {
+    background: #FF9910;
+    transform: scale(1.2);
+}
+
+/* RIGHT CONTENT */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.about-tag {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #23965A;
+}
+
+.about-content h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #111;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+}
+
+.about-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+
+    width: 90%;
+    text-align: justify;
+}
+
+.about-content span {
+
+    margin-top: 20px !important;
+    color: #111;
+    font-weight: 500;
+    font-size: 15px;
+    border-left: 3px solid #111;
+    padding-left: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .swiper-frame {
+        height: 420px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+}

@@ -25,6 +25,11 @@ code {
   --color-text-accent: #735377;
   --color-text-bold: #3c2e3e;
 
+
+  --color-logo1: #FF9910;
+  --color-logo2: #23965A;
+  --color-logo3: #FFE141;
+
   --basic-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   --md-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
 }

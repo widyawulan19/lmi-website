@@ -6,6 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 import AosInit from './Utils/Aosinit';
 import LmiLanding from './Pages/LmiLanding';
+import AboutHero from './Pages/AboutHero';
 
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
       <Routes>
         {/* <Route path='/' element={<LandingPage />} /> */}
         <Route path='/' element={<LmiLanding />} />
+
+        <Route path='/about' element={<AboutHero />} />
       </Routes>
     </div>
   );

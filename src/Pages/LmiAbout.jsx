@@ -1,6 +1,7 @@
 import React from "react";
 import "../Style/LMI/About.css";
 import aboutImg from '../Assets/aboutimg.png'
+import { FaCircle } from "react-icons/fa";
 
 function LmiAbout() {
   return (
@@ -8,7 +9,7 @@ function LmiAbout() {
 
       <div className="about-container">
 
-        <div className="about-top">
+        <div className="about-top" data-aos="zoom-out" data-aos-duration="1000">
 
           <span className="about-tag">
             OUR LEGACY
@@ -30,7 +31,7 @@ function LmiAbout() {
 
         <div className="about-grid">
 
-          <div className="about-image">
+          <div className="about-image" data-aos="zoom-out" data-aos-duration="1000">
 
             <img
               src={aboutImg}
@@ -48,8 +49,8 @@ function LmiAbout() {
 
           <div className="about-content">
 
-            <div className="content-block">
-              <h3>Trusted by Retailers Nationwide</h3>
+            <div className="content-block" data-aos="fade-up" data-aos-delay="200">
+              <h3><FaCircle className="content-icon" /> Trusted by Retailers Nationwide</h3>
 
               <p>
                 We understand market trends, customer behavior,
@@ -58,8 +59,8 @@ function LmiAbout() {
               </p>
             </div>
 
-            <div className="content-block">
-              <h3>Integrated Manufacturing Process</h3>
+            <div className="content-block" data-aos="fade-up" data-aos-delay="200">
+              <h3><FaCircle className="content-icon" /> Integrated Manufacturing Process</h3>
 
               <p>
                 From sourcing fabrics to final quality control,
@@ -68,8 +69,8 @@ function LmiAbout() {
               </p>
             </div>
 
-            <div className="content-block">
-              <h3>Built for Long-Term Partnership</h3>
+            <div className="content-block" data-aos="fade-up" data-aos-delay="200">
+              <h3><FaCircle className="content-icon" /> Built for Long-Term Partnership</h3>
 
               <p>
                 Our mission goes beyond supplying products.

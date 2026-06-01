@@ -1,0 +1,162 @@
+.history-premium {
+    padding: 140px 8%;
+    background: #fff;
+}
+
+/* HEADER */
+.hp-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 100px;
+}
+
+.hp-header span {
+    letter-spacing: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-logo1);
+}
+
+.hp-header h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-top: 15px;
+    color: #111;
+    font-weight: 600;
+}
+
+.hp-header p {
+    margin-top: 18px;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    width: 100%;
+    text-align: center;
+}
+
+/* TIMELINE WRAPPER */
+.hp-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* GLASS LINE (gradient luxury) */
+.hp-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #111, transparent);
+    opacity: 0.4;
+}
+
+/* PROGRESS LINE (THIS IS THE MAGIC) */
+.hp-line-progress {
+    position: absolute;
+    left: 50%;
+    transform-origin: top;
+    transform: translateX(-50%) scaleY(0);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #FF9910, #FFE141);
+    /* background: linear-gradient(to bottom, #111, #444); */
+    transition: transform 0.2s linear;
+}
+
+/* ITEM */
+.hp-item {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: 90px;
+    width: 100%;
+}
+
+/* alternate layout */
+.hp-item.left {
+    justify-content: flex-start;
+}
+
+.hp-item.right {
+    justify-content: flex-end;
+}
+
+/* DOT */
+.hp-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 2px solid #111;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.04);
+}
+
+/* CARD */
+.hp-card {
+    width: 42%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 22px;
+    border-radius: 18px;
+    transition: 0.4s ease;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.01);
+}
+
+.hp-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* TEXT */
+.hp-year {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--color-logo1);
+}
+
+.hp-card h4 {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #111;
+}
+
+.hp-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    .hp-line {
+        left: 20px;
+    }
+
+    .hp-dot {
+        left: 20px;
+        transform: none;
+    }
+
+    .hp-item {
+        justify-content: flex-start !important;
+    }
+
+    .hp-card {
+        width: 100%;
+        margin-left: 40px;
+    }
+
+    .hp-header h2 {
+        font-size: 28px;
+    }
+}

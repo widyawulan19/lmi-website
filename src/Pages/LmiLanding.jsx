@@ -4,6 +4,9 @@ import '../Style/Landing.css'
 import LmiNavbar from './LmiNavbar'
 import LmiHero from './LmiHero'
 import LmiAbout from './LmiAbout'
+import LmiPartnerBenefit from './LmiPartnerBenefit'
+import LmiCTA from './LmiCTA'
+import LmiFooter from './LmiFooter'
 
 
 function LmiLanding() {
@@ -12,6 +15,9 @@ function LmiLanding() {
         <LmiNavbar/>
         <LmiHero/>
         <LmiAbout/>
+        <LmiPartnerBenefit/>
+        <LmiCTA/>
+        <LmiFooter/>
 
     </div>
   )
