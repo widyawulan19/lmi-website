@@ -54,18 +54,20 @@ ${formData.message}
 
       <div className="contact-hero">
 
-        <span>CONTACT US</span>
+        <div className="hero-header">
+          <span>CONTACT US</span>
 
-        <h1>
-          Let's Start
-          A Conversation
-        </h1>
+          <h1>
+            Let's Start
+            A Conversation
+          </h1>
 
-        <p>
-          Whether you are a customer, partner,
-          or future team member, we would love
-          to hear from you.
-        </p>
+          <p>
+            Whether you are a customer, partner,
+            or future team member, we would love
+            to hear from you.
+          </p>
+        </div>
 
       </div>
 
@@ -97,11 +99,13 @@ ${formData.message}
           <div className="contact-card">
 
             <FaPhoneAlt />
-
             <div>
+              {/* <div className="cc-title">
+                <FaPhoneAlt />
+                <h4>Phone Number</h4>
+              </div> */}
 
               <h4>Phone Number</h4>
-
               <p>
                 +62 812 3456 7890
               </p>
@@ -194,15 +198,23 @@ ${formData.message}
 
       {/* MAP */}
 
-      <div className="contact-map">
+     <div className="contact-map">
 
-        <iframe
-          title="Lamonte Location"
-          src="https://www.google.com/maps/embed?pb="
-          loading="lazy"
-        ></iframe>
-
+      <div className="cm-header">
+        <span>Find Us Here</span>
+        <h4>Visit Our Office</h4>
+        <p>Meet our team and discover how Lamonte delivers high-quality children's fashion manufacturing solutions for partners across Indonesia and beyond.</p>
       </div>
+
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8463078895875!2d106.8174083!3d-6.1513323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f60a03c58f71%3A0xc9cd72f074ef46b4!2sHayam%20Wuruk%20St%20No.111%2C%20RT.9%2FRW.9%2C%20Maphar%2C%20Taman%20Sari%2C%20West%20Jakarta%20City%2C%20Jakarta%2011160!5e0!3m2!1sen!2sid!4v1780474530165!5m2!1sen!2sid" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+
+    </div>
 
     </section>
 

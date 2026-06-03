@@ -55,14 +55,18 @@
     display: grid;
 
     grid-template-columns:
-        1fr 450px;
+        minmax(0, 1fr) 420px;
+
+    gap: 50px;
+
+    padding: 50px 60px;
 }
 
 /* LEFT */
 
 .job-info {
-
     padding: 60px;
+    padding-left: 0px;
 }
 
 .job-badge {
@@ -103,11 +107,19 @@
 
 .job-section {
 
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    gap: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .job-section h3 {
 
+    width: 100%;
+    text-align: left;
     font-size: 28px;
 
     margin-bottom: 20px;
@@ -116,61 +128,80 @@
 .job-section ul {
 
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .job-section li {
 
-    position: relative;
+    width: 100%;
 
-    padding-left: 28px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
 
     margin-bottom: 16px;
 
     color: #555;
 
     line-height: 1.8;
+    text-align: left;
 }
 
 .job-section li::before {
+    content: "✓";
 
-    content: "";
+    color: var(--color-logo1);
 
-    width: 10px;
-    height: 10px;
+    font-weight: 700;
 
-    border-radius: 50%;
+    flex-shrink: 0;
 
-    background:
-        var(--color-logo1);
-
-    position: absolute;
-
-    left: 0;
-    top: 11px;
+    margin-top: 4px;
 }
 
 /* RIGHT */
 
+
 .job-form {
 
-    background: #fafafa;
+    position: sticky;
 
-    padding: 60px 40px;
+    top: 20px;
 
-    border-left:
-        1px solid #eee;
+    background: white;
+    height: fit-content;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    border: 1px solid #eee;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .08);
 }
 
 .job-form h2 {
 
-    font-size: 42px;
+    font-size: 25px;
 
     margin-bottom: 35px;
 }
 
 .form-group {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     margin-bottom: 24px;
+    /* border: 1px solid blue; */
 }
 
 .form-group label {
@@ -182,19 +213,35 @@
     font-weight: 600;
 
     color: #111;
+    width: 100%;
+    text-align: left;
 }
+
 
 .form-group input {
 
-    width: 100%;
+    width: 90%;
 
-    padding: 16px;
+    padding: 18px;
 
     border: 1px solid #ddd;
 
     border-radius: 10px;
 
+    transition: .3s;
+
     font-size: 15px;
+}
+
+.form-group input:focus {
+
+    outline: none;
+
+    border-color:
+        var(--color-logo1);
+
+    box-shadow:
+        0 0 0 4px rgba(255, 153, 16, .15);
 }
 
 .form-group small {
@@ -232,4 +279,146 @@
 .submit-btn:hover {
 
     transform: translateY(-2px);
+}
+
+
+/* =======================
+BREAK POINT
+======================= */
+@media (max-width: 1024px) {
+
+    .job-modal-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .job-form {
+
+        position: static;
+    }
+
+    .job-info {
+
+        padding: 0;
+    }
+
+    .job-modal-header {
+
+        padding: 40px;
+    }
+
+    .job-modal-layout {
+
+        padding: 40px;
+    }
+
+    .job-info h2 {
+
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .job-modal {
+
+        padding: 12px;
+    }
+
+    .job-modal-content {
+
+        border-radius: 20px;
+    }
+
+    .job-modal-header {
+
+        padding: 30px;
+    }
+
+    .job-modal-header h1 {
+
+        font-size: 36px;
+    }
+
+    .job-modal-layout {
+
+        padding: 30px;
+    }
+
+    .job-info h2 {
+
+        font-size: 32px;
+    }
+
+    .job-section h3 {
+
+        font-size: 24px;
+    }
+
+    .job-form {
+
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .job-modal {
+
+        padding: 0;
+    }
+
+    .job-modal-content {
+
+        height: 100vh;
+
+        max-height: 100vh;
+
+        border-radius: 0;
+    }
+
+    .close-btn {
+
+        top: 15px;
+        right: 18px;
+
+        font-size: 30px;
+    }
+
+    .job-modal-header {
+
+        padding: 25px 20px;
+    }
+
+    .job-modal-layout {
+
+        padding: 20px;
+    }
+
+    .job-info h2 {
+
+        font-size: 28px;
+    }
+
+    .job-section h3 {
+
+        font-size: 22px;
+    }
+
+    .job-section li {
+
+        font-size: 14px;
+    }
+
+    .form-group input {
+
+        padding: 15px;
+    }
+
+    .submit-btn {
+
+        padding: 16px;
+    }
 }

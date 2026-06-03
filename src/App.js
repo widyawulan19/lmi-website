@@ -12,6 +12,7 @@ import Carrers from './Pages/Carrers/Carrers';
 import Contact from './Pages/Contact';
 import ArticlePages from './Pages/Article/ArticlePages';
 import ArticleMain from './Pages/Article/ArticleMain';
+// import CareerJobModal from './Pages/Carrers/CarrerJobModal';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/articles/:slug' element={<ArticleMain />} />
 
         <Route path='/careers' element={<Carrers />} />
+        {/* <Route path='/careers/:title' element={<CareerJobModal />} /> */}
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </div>

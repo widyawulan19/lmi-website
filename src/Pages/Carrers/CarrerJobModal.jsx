@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaCircle } from "react-icons/fa";
+import '../../Style/Carrers/CarrerModals.css'
 
 
 function CareerJobModal({ job, closeModal }) {
@@ -65,25 +67,30 @@ ${formData.portfolio}
 
           <div className="job-info">
 
-            <div className="job-badge">
-              {job.type}
+            <div className="job-modal-header">
+
+              <div className="job-badge">
+                {job.type}
+              </div>
+
+              <h1>{job.title}</h1>
+
+              <p>
+                Join our team and grow together with Lamonte.
+              </p>
+
             </div>
 
-            <h2>{job.title}</h2>
-
-            <p className="job-description">
-              {job.description}
-            </p>
 
             <div className="job-section">
 
               <h3>
-                Responsibilities
+                Description
               </h3>
 
               <ul>
 
-                {job.responsibilities.map(
+                {job.description.map(
                   (item, index) => (
                     <li key={index}>
                       {item}
@@ -95,6 +102,7 @@ ${formData.portfolio}
 
             </div>
 
+
             <div className="job-section">
 
               <h3>
@@ -103,7 +111,7 @@ ${formData.portfolio}
 
               <ul>
 
-                {job.requirements.map(
+                {job.qualifications.map(
                   (item, index) => (
                     <li key={index}>
                       {item}
