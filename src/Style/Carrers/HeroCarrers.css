@@ -1,0 +1,190 @@
+.career-hero {
+    padding-top: 0;
+    padding: 0%;
+    padding-top: 50px;
+    background: #fff;
+    position: relative;
+    /* border: 1px solid red; */
+
+    height: 100vh;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, .65),
+            rgba(0, 0, 0, .55)),
+        url('../../Assets/pexels-alex-green-5699475-scaled.jpg');
+}
+
+.career-hero::before {
+    content: "";
+
+    position: absolute;
+
+    /* top: 120px; */
+    right: 5%;
+
+    width: 180px;
+    height: 250px;
+
+    background-image:
+        radial-gradient(var(--color-logo1) 1px,
+            transparent 1px);
+
+    background-size: 16px 16px;
+
+    opacity: .18;
+
+    pointer-events: none;
+}
+
+.career-hero-content {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    text-align: center;
+
+    padding: 0 20px;
+}
+
+.career-hero-content span {
+
+    display: inline-block;
+
+    color: var(--color-logo1);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+.career-hero-content h1 {
+
+    font-size: 72px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    color: #fff;
+
+    margin-bottom: 25px;
+
+    max-width: 900px;
+}
+
+.career-hero-content p {
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, .85);
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    font-weight: 400;
+}
+
+.career-watermark {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 220px;
+
+    font-weight: 800;
+
+    color: rgba(255, 255, 255, .04);
+
+    letter-spacing: 10px;
+
+    user-select: none;
+
+    pointer-events: none;
+}
+
+.career-btn {
+
+    display: inline-flex;
+
+    margin-top: 35px;
+
+    padding: 16px 32px;
+
+    border-radius: 999px;
+
+    background: var(--color-logo1);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.career-btn:hover {
+
+    transform: translateY(-4px);
+}
+
+@media(max-width:992px) {
+
+    .career-hero-content h1 {
+        font-size: 56px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .career-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .career-watermark {
+        font-size: 140px;
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .career-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .career-hero-content p {
+        font-size: 15px;
+    }
+
+    .career-watermark {
+        font-size: 80px;
+    }
+
+}

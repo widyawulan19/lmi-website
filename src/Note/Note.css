@@ -1,27 +1,127 @@
-.hp-timeline {
+.article-detail-hero {
+
     position: relative;
+
+    height: 75vh;
+
+    overflow: hidden;
+}
+
+.article-detail-hero img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.article-detail-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, .2),
+            rgba(0, 0, 0, .8));
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 80px 8%;
+}
+
+/* =======================
+ARTICLE INFO
+======================= */
+.article-info {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-info span {
+
+    color: var(--color-logo1);
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    padding: 5px 20px;
+}
+
+.article-info h1 {
+
+    color: #000;
+
+    font-size: 40px;
+
     max-width: 900px;
-    margin: 0 auto;
+
+    margin: 15px 0;
 }
 
-/* BACKGROUND LINE */
-.hp-line-bg {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.08);
+.article-info p {
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, .8);
 }
 
-/* PROGRESS LINE (THIS IS THE MAGIC) */
-.hp-line-progress {
-    position: absolute;
-    left: 50%;
-    transform-origin: top;
-    transform: translateX(-50%) scaleY(0);
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(to bottom, #111, #444);
-    transition: transform 0.2s linear;
+.article-detail-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 100px 8%;
+}
+
+.article-detail-container h2 {
+
+    margin-top: 60px;
+
+    margin-bottom: 20px;
+
+    font-size: 34px;
+
+    color: #111;
+}
+
+.article-detail-container p {
+
+    line-height: 2;
+
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+.article-detail-container strong {
+
+    color: #111;
+
+    font-weight: 700;
+}
+
+.article-detail-container ul {
+
+    padding-left: 20px;
+
+    margin-bottom: 20px;
+}
+
+.article-detail-container li {
+
+    margin-bottom: 10px;
+
+    line-height: 1.8;
 }

@@ -7,6 +7,11 @@ import 'aos/dist/aos.css';
 import AosInit from './Utils/Aosinit';
 import LmiLanding from './Pages/LmiLanding';
 import AboutHero from './Pages/AboutHero';
+import LmiGallery from './Pages/LmiGallery';
+import Carrers from './Pages/Carrers/Carrers';
+import Contact from './Pages/Contact';
+import ArticlePages from './Pages/Article/ArticlePages';
+import ArticleMain from './Pages/Article/ArticleMain';
 
 
 function App() {
@@ -14,10 +19,14 @@ function App() {
     <div className="App">
       <AosInit />
       <Routes>
-        {/* <Route path='/' element={<LandingPage />} /> */}
         <Route path='/' element={<LmiLanding />} />
-
         <Route path='/about' element={<AboutHero />} />
+        <Route path='/gallery' element={<LmiGallery />} />
+        <Route path='/articles' element={<ArticlePages />} />
+        <Route path='/articles/:slug' element={<ArticleMain />} />
+
+        <Route path='/careers' element={<Carrers />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
     </div>
   );

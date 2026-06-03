@@ -1,0 +1,412 @@
+/* ========================================
+   COMPANY CULTURE
+======================================== */
+
+.culture-section {
+
+    position: relative;
+
+    padding: 120px 8%;
+
+    display: grid;
+    grid-template-columns: 38% 62%;
+
+    gap: 80px;
+
+    background: #fff;
+
+    overflow: hidden;
+}
+
+/* Decorative Dot Pattern */
+
+.culture-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 100px;
+    right: 5%;
+
+    width: 180px;
+    height: 220px;
+
+    background-image:
+        radial-gradient(var(--color-logo1) 1px,
+            transparent 1px);
+
+    background-size: 16px 16px;
+
+    opacity: .12;
+
+    pointer-events: none;
+}
+
+/* Orange Glow */
+
+.culture-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: var(--color-logo1);
+
+    filter: blur(180px);
+
+    opacity: .05;
+
+    left: -100px;
+    bottom: -100px;
+
+    pointer-events: none;
+}
+
+/* ========================================
+   LEFT SIDE
+======================================== */
+
+.culture-left {
+
+    position: sticky;
+    top: 120px;
+
+    height: max-content;
+
+    z-index: 2;
+}
+
+.culture-left span {
+
+    display: inline-block;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: var(--color-logo1);
+
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.culture-left h2 {
+
+    font-size: 40px;
+
+    line-height: 1.15;
+
+    color: #111;
+
+    margin-bottom: 25px;
+}
+
+.culture-left p {
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: #666;
+
+    max-width: 480px;
+    text-align: justify;
+}
+
+.vm-shape {
+    position: absolute;
+
+    pointer-events: none;
+
+    opacity: 0.1;
+
+    z-index: 0;
+    width: 100%;
+    top: 90%;
+    /* left: -20%; */
+
+
+    display: block;
+    align-self: center;
+    justify-self: left;
+}
+
+/* ========================================
+   RIGHT SIDE
+======================================== */
+
+.culture-right {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 40px;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* ========================================
+   CULTURE ITEM
+======================================== */
+
+.culture-item {
+
+    padding-bottom: 35px;
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, .08);
+
+    transition: .3s ease;
+
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.culture-item:hover {
+
+    transform: translateX(8px);
+    border-bottom: 2px solid var(--color-logo1);
+}
+
+.culture-top {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+/* Number */
+
+.culture-number {
+
+    font-size: 56px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    color: var(--color-logo1);
+
+    opacity: .12;
+}
+
+/* Icon */
+
+.culture-icon {
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 153, 16, .08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+
+    color: var(--color-logo1);
+
+    transition: .3s;
+}
+
+.culture-item:hover .culture-icon {
+
+    transform: rotate(8deg);
+
+    background:
+        rgba(255, 153, 16, .15);
+}
+
+/* Title */
+
+.culture-text {
+    /* border: 1px solid red; */
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.culture-item h4 {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #111;
+
+    margin: 0px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Description */
+
+.culture-item p {
+
+    font-size: 15px;
+
+    /* line-height: 1.9; */
+
+    color: #666;
+
+    max-width: 700px;
+
+    width: 100%;
+    text-align: left;
+}
+
+/* ========================================
+   BREAKPOINT 992
+======================================== */
+
+@media (max-width: 992px) {
+
+    .culture-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .culture-left {
+
+        position: static;
+    }
+
+    .culture-left h2 {
+
+        font-size: 42px;
+    }
+
+    .culture-right {
+
+        gap: 30px;
+    }
+
+    .culture-number {
+
+        font-size: 46px;
+    }
+}
+
+/* ========================================
+   BREAKPOINT 768
+======================================== */
+
+@media (max-width: 768px) {
+
+    .culture-section {
+
+        padding: 100px 6%;
+    }
+
+    .culture-left h2 {
+
+        font-size: 36px;
+    }
+
+    .culture-left p {
+
+        font-size: 15px;
+    }
+
+    .culture-number {
+
+        font-size: 40px;
+    }
+
+    .culture-icon {
+
+        width: 55px;
+        height: 55px;
+
+        font-size: 20px;
+    }
+
+    .culture-item h4 {
+
+        font-size: 22px;
+    }
+}
+
+/* ========================================
+   BREAKPOINT 480
+======================================== */
+
+@media (max-width: 480px) {
+
+    .culture-section {
+
+        padding: 80px 5%;
+    }
+
+    .culture-left span {
+
+        font-size: 12px;
+
+        letter-spacing: 3px;
+    }
+
+    .culture-left h2 {
+
+        font-size: 30px;
+    }
+
+    .culture-left p {
+
+        font-size: 14px;
+    }
+
+    .culture-top {
+
+        gap: 15px;
+    }
+
+    .culture-number {
+
+        font-size: 32px;
+    }
+
+    .culture-icon {
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 18px;
+    }
+
+    .culture-item h4 {
+
+        font-size: 20px;
+    }
+
+    .culture-item p {
+
+        font-size: 14px;
+    }
+
+    .culture-section::before {
+
+        display: none;
+    }
+}

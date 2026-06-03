@@ -1,3 +1,133 @@
+ArticlesPage
+│
+├── ArticleHero
+├── ArticleFilter
+├── ArticleFeatured
+├── ArticleGrid
+│
+└── ArticleSidebar
+     ├── AboutArticles
+     ├── RecentPosts
+     └── PopularTags
+
+import articleImg1 from "../Assets/article-detail-1.jpg";
+import articleImg2 from "../Assets/article-detail-2.jpg";
+
+{
+  id:1,
+
+  title:"Future of Children's Fashion",
+
+  sections:[
+    {
+      type:"paragraph",
+
+      title:"Introduction",
+
+      content:
+      "PT Lamonte Mode Internasional continues to strengthen its position through innovation and strategic partnerships."
+    },
+
+    {
+      type:"image",
+
+      image:articleImg1,
+
+      caption:
+      "Production activities at Lamonte factory."
+    },
+
+    {
+      type:"paragraph",
+
+      title:"Industry Trends",
+
+      content:
+      "The children's fashion industry continues to evolve rapidly..."
+    },
+
+    {
+      type:"image",
+
+      image:articleImg2,
+
+      caption:
+      "Product development and quality control process."
+    },
+
+    {
+      type:"paragraph",
+
+      title:"Conclusion",
+
+      content:
+      "Companies that adapt quickly will gain stronger advantages."
+    }
+  ]
+}
+     
+
+
+{
+  article.sections.map(
+    (section,index)=>{
+
+      if(
+        section.type === "paragraph"
+      ){
+
+        return(
+
+          <div
+            key={index}
+            className="article-section"
+          >
+
+            <h2>
+              {section.title}
+            </h2>
+
+            <p>
+              {section.content}
+            </p>
+
+          </div>
+
+        )
+
+      }
+
+      if(
+        section.type === "image"
+      ){
+
+        return(
+
+          <figure
+            key={index}
+            className="article-image"
+          >
+
+            <img
+              src={section.image}
+              alt=""
+            />
+
+            <figcaption>
+              {section.caption}
+            </figcaption>
+
+          </figure>
+
+        )
+
+      }
+
+      return null;
+    }
+  )
+}
+     
 1. Navbar
 Berisi navigasi utama supaya pengunjung gampang pindah section.
 2. Hero Section Section pertama untuk menarik perhatian.Isi biasanya:

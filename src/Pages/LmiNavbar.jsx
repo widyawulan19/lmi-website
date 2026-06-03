@@ -35,10 +35,10 @@ function LmiNavbar() {
             <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
                 <a href="/">HOME</a>
                 <a href="/about">ABOUT US</a>
-                <a href="/">GALLERY</a>
-                <a href="/">ARTICLES</a>
-                <a href="/">CAREERS</a>
-                <a href="/">CONTACT US</a>
+                <a href="/gallery">GALLERY</a>
+                <a href="/articles">ARTICLES</a>
+                <a href="/careers">CAREERS</a>
+                <a href="/contact">CONTACT US</a>
             </div>
 
             <div className="navbar-actions">

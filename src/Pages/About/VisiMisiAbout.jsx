@@ -1,5 +1,7 @@
 import React from "react";
 import '../../Style/About/VisiMisi.css';
+import { BsFillPinAngleFill } from "react-icons/bs";
+import { BiSolidQuoteAltLeft } from "react-icons/bi";
 
 function VisiMisiAbout() {
   const missions = [
@@ -42,10 +44,26 @@ function VisiMisiAbout() {
 
       {/* VISION */}
       <div className="vision-box">
-        <span>OUR VISION</span>
-        <h2>
-         Contribute to sustainable development for society and the environment. Continuously innovate, lead, improve, provide the best value products and services to global customers. Creating our branding to stay ahead of fashion trends, market changes and the latest technology. As well as improving the quality of life of our business partners, customers and employees.
-        </h2>
+        <div className="vision-label">
+          <span>OUR VISION</span>
+          <h3>What We Commit To</h3>
+        </div>
+
+        <div className="vision-content">
+
+          <div className="vision-mark">
+            <BiSolidQuoteAltLeft size={40}/>
+          </div>
+
+          <div className="vision-text">
+
+            <h2>
+             Contribute to sustainable development for society and the environment. Continuously innovate, lead, improve, provide the best value products and services to global customers. Creating our branding to stay ahead of fashion trends, market changes and the latest technology. As well as improving the quality of life of our business partners, customers and employees.
+            </h2>
+          </div>
+
+        </div>
+
       </div>
 
       {/* MISSION */}
@@ -56,14 +74,29 @@ function VisiMisiAbout() {
           <h3>What We Commit To</h3>
         </div>
 
-        <div className="mission-grid">
+        <div className="mission-list">
           {missions.map((item, i) => (
-            <div className="mission-card" key={i}>
-              <div className="number">0{i + 1}</div>
-              <h4>{item.subTitle}</h4>
-              <p>{item.desc}</p>
+
+            <div className="mission-item" key={i}>
+
+              <div className="mission-number">
+                {String(i + 1).padStart(2, "0")}
+              </div>
+
+              <div className="mission-divider"></div>
+
+              <div className="mission-info">
+
+                <h4>{item.subTitle}</h4>
+
+                <p>{item.desc}</p>
+
+              </div>
+
             </div>
+
           ))}
+
         </div>
 
       </div>
