@@ -42,7 +42,7 @@ ${formData.message}
 `;
 
     window.location.href =
-      `mailto:info@lamonte.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      `mailto:hello@lamonte.id?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   };
 
