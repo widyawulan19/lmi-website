@@ -27,7 +27,7 @@ function ArticleMain() {
         })
     }
 
-      const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
 
     e.preventDefault();
 
@@ -44,11 +44,15 @@ function ArticleMain() {
     `;
 
         window.location.href =
-        `mailto:info@lamonte.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        `mailto:hello@lamonte.id?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     };
 
   const { slug } = useParams();
+
+  const handleShare = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   const article =
     articles.find(
@@ -160,12 +164,60 @@ function ArticleMain() {
 
       </div>
 
-      <div className="share-btn">
+      {/* <div className="share-btn">
         <FaFacebookF className="share-icon"/>
         <FaTwitter className="share-icon"/>
         <FaLinkedinIn className="share-icon"/>
         <FaWhatsapp className="share-icon"/>
         <FaTelegramPlane className="share-icon"/>
+      </div> */}
+      <div className="share-btn">
+
+        <FaFacebookF
+          className="share-icon"
+          onClick={() =>
+            handleShare(
+              "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flmi.co.id%2Flamonte-beri-edukasi-masyarakat-jualan-itu-mudah-dan-menyenangkan-2%2F&t=Lamonte+Beri+Edukasi+Masyarakat%2C+Jualan+Itu+Mudah+dan+Menyenangkan+-+PT+Lamonte+Mode+Internasional"
+            )
+          }
+        />
+
+        <FaTwitter
+          className="share-icon"
+          onClick={() =>
+            handleShare(
+              "https://x.com/i/flow/login?redirect_after_login=%2Fshare%3Furl%3Dhttps%253A%252F%252Flmi.co.id%252Flamonte-beri-edukasi-masyarakat-jualan-itu-mudah-dan-menyenangkan-2%252F%26text%3DLamonte%2520Beri%2520Edukasi%2520Masyarakat%252C%2520Jualan%2520Itu%2520Mudah%2520dan%2520Menyenangkan%2520-%2520PT%2520Lamonte%2520Mode%2520Internasional"
+            )
+          }
+        />
+
+        <FaLinkedinIn
+          className="share-icon"
+          onClick={() =>
+            handleShare(
+              "https://www.linkedin.com/login/?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Furl%3Dhttps%253A%252F%252Flmi.co.id%252Flamonte-beri-edukasi-masyarakat-jualan-itu-mudah-dan-menyenangkan-2%252F%26text%3DLamonte%2520Beri%2520Edukasi%2520Masyarakat%252C%2520Jualan%2520Itu%2520Mudah%2520dan%2520Menyenangkan%2520-%2520PT%2520Lamonte%2520Mode%2520Internasional%26summary%3D%26mini%3Dtrue"
+            )
+          }
+        />
+
+        <FaWhatsapp
+          className="share-icon"
+          onClick={() =>
+            handleShare(
+              "https://api.whatsapp.com/send?text=https%3A%2F%2Flmi.co.id%2Flamonte-beri-edukasi-masyarakat-jualan-itu-mudah-dan-menyenangkan-2%2F"
+            )
+          }
+        />
+
+        <FaTelegramPlane
+          className="share-icon"
+          onClick={() =>
+            handleShare(
+              "https://t.me/share/url?url=https%3A%2F%2Flmi.co.id%2Flamonte-beri-edukasi-masyarakat-jualan-itu-mudah-dan-menyenangkan-2%2F"
+            )
+          }
+        />
+
       </div>
 
       <div className="contact-form-box">

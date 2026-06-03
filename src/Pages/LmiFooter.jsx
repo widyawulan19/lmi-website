@@ -24,11 +24,11 @@ function LmiFooter() {
           <h3>Navigation</h3>
 
           <a href="/">HOME</a>
-          <a href="/">ABOUT US</a>
-          <a href="/">GALLERY</a>
-          <a href="/">ARTICLES</a>
-          <a href="/">CARRERS</a>
-          <a href="/">CONTACT US</a>
+          <a href="/about">ABOUT US</a>
+          <a href="/gallery">GALLERY</a>
+          <a href="/articles">ARTICLES</a>
+          <a href="/careers">CARRERS</a>
+          <a href="/contact">CONTACT US</a>
 
         </div>
 
@@ -36,9 +36,8 @@ function LmiFooter() {
 
           <h3>Contact</h3>
 
-          <p>+62 82111135519</p>
-          <p>+62 81290279222</p>
-          <p>hello@lmi.co.id</p>
+          <p>+62 87897117360</p>
+          <p>hello@lamonte.id</p>
 
         </div>
 

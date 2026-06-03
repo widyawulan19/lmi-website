@@ -39,7 +39,7 @@ ${formData.portfolio}
 `;
 
     window.location.href =
-      `mailto:hr@lamonte.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      `mailto:hello@lamonte.id?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (

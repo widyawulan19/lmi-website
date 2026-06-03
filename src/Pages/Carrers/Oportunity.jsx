@@ -145,7 +145,7 @@ function Oportunity() {
   const [selectedJob, setSelectedJob] = useState(null);
 
   return (
-    <section className="jobs-section">
+    <section className="jobs-section" id='opportunities'>
 
       <div className="jobs-header">
 

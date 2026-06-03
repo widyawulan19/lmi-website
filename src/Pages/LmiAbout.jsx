@@ -40,7 +40,7 @@ function LmiAbout() {
 
             <div className="floating-card">
 
-              <h3>13+</h3>
+              <h3>15+</h3>
               <p>Years of Industry Experience</p>
 
             </div>

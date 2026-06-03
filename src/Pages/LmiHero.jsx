@@ -26,11 +26,25 @@ function LmiHero() {
 
             <div className="hero-buttons">
 
-            <button className="hero-primary">
-                Become Distributor
-            </button>
+            <a 
+              href="https://wa.me/6287897117360?text=Hallo%2C%20bagaimana%20cara%20menjadi%20distributor%20Lamonte%3F"
+              target="_blank"
+              rel="noopener noreferrer"  
+            >
+              <button className="hero-primary">
+                  Become Distributor
+              </button>
+            </a>
 
-            <button className="hero-secondary">
+            <button 
+              className="hero-secondary"
+              onClick={() =>
+                window.open(
+                  "https://lamonte.id/",
+                  "_blank"
+                )
+              }
+            >
                 View Collection
             </button>
 
@@ -41,7 +55,7 @@ function LmiHero() {
       <div className="hero-stats">
 
         <div className="stat-card" data-aos="fade-up"  data-aos-delay="200">
-          <h2>13+</h2>
+          <h2>15+</h2>
           <p>Years Experience</p>
         </div>
 

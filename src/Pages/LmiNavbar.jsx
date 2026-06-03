@@ -42,9 +42,15 @@ function LmiNavbar() {
             </div>
 
             <div className="navbar-actions">
+              <a 
+                href="https://wa.me/6287897117360?text=Hallo%2C%20bagaimana%20cara%20menjadi%20distributor%20Lamonte%3F"
+                target="_blank"
+                rel="noopener noreferrer"  
+              >
                 <button className="btn-primary">
                 Contact Us
                 </button>
+              </a>
 
                 <div
                 className="hamburger"
